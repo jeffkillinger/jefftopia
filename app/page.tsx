@@ -13,6 +13,9 @@ export default function Home() {
           <a className="text-zinc-600 hover:text-zinc-900" href="#features">
             Features
           </a>
+          <a className="text-zinc-600 hover:text-zinc-900" href="/store">
+            Store
+          </a>
           <a className="text-zinc-600 hover:text-zinc-900" href="#about">
             About
           </a>
