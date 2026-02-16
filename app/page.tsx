@@ -1,65 +1,113 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen">
+      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+        <div className="flex items-center gap-3">
+          <div className="grid h-10 w-10 place-items-center rounded-xl border border-zinc-200">
+            J
+          </div>
+          <span className="text-lg font-semibold tracking-tight">Jefftopia</span>
+        </div>
+
+        <nav className="flex items-center gap-4 text-sm">
+          <a className="text-zinc-600 hover:text-zinc-900" href="#features">
+            Features
+          </a>
+          <a className="text-zinc-600 hover:text-zinc-900" href="#about">
+            About
+          </a>
+          <button className="rounded-xl border border-zinc-200 px-4 py-2 text-zinc-900 hover:bg-zinc-50">
+            Sign in
+          </button>
+        </nav>
+      </header>
+
+      <section className="mx-auto grid max-w-6xl gap-10 px-6 pb-16 pt-10 md:grid-cols-2 md:items-center">
+        <div className="space-y-6">
+          <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-700">
+            <span className="font-medium">New</span>
+            <span className="text-zinc-500">The internet’s most unnecessary social network</span>
+          </div>
+
+          <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
+            A home for Jeffs.
+            <span className="block text-zinc-500">Everyone else can look, but can’t post.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="max-w-prose text-base leading-relaxed text-zinc-600">
+            Jefftopia is a playful, well-built Next.js app that doubles as a portfolio-grade
+            demo of authentication, content feeds, payments, and community features.
           </p>
+
+          <div className="flex flex-wrap gap-3">
+            <button className="rounded-xl bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800">
+              Get started
+            </button>
+            <button className="rounded-xl border border-zinc-200 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50">
+              See the roadmap
+            </button>
+          </div>
+
+          <div className="flex flex-wrap gap-3 text-xs text-zinc-500">
+            <span className="rounded-full border border-zinc-200 px-3 py-1">Next.js</span>
+            <span className="rounded-full border border-zinc-200 px-3 py-1">TypeScript</span>
+            <span className="rounded-full border border-zinc-200 px-3 py-1">Tailwind</span>
+            <span className="rounded-full border border-zinc-200 px-3 py-1">Auth (soon)</span>
+            <span className="rounded-full border border-zinc-200 px-3 py-1">Stripe (soon)</span>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="rounded-3xl border border-zinc-200 bg-gradient-to-b from-zinc-50 to-white p-6">
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <p className="text-sm font-medium">Today in Jefftopia</p>
+              <span className="text-xs text-zinc-500">live feed mock</span>
+            </div>
+
+            {[
+              { title: "Jeff posted a hot take", body: "Is it ethical to limit a website to Jeffs only?" },
+              { title: "Jeff asked a question", body: "Can we detect Jeff-ness without being weird about it?" },
+              { title: "Jeff started a thread", body: "Show me your favorite Jeff moments in movies." },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl border border-zinc-200 bg-white p-4">
+                <p className="text-sm font-medium">{item.title}</p>
+                <p className="mt-1 text-sm text-zinc-600">{item.body}</p>
+              </div>
+            ))}
+
+            <div className="rounded-2xl border border-dashed border-zinc-300 bg-white p-4 text-sm text-zinc-600">
+              Next up: real auth, real posts, real Jeff verification.
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section id="features" className="mx-auto max-w-6xl px-6 py-16">
+        <h2 className="text-2xl font-semibold tracking-tight">Features</h2>
+        <p className="mt-2 max-w-prose text-zinc-600">
+          Built like a real product, even if the premise is completely ridiculous.
+        </p>
+
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          {[
+            { title: "Jeff-only posting", desc: "Read-only for non-Jeffs, full access for Jeffs." },
+            { title: "Discussion threads", desc: "Reddit-style posts, comments, upvotes." },
+            { title: "Payments", desc: "Stripe-powered Jeff+ perks and supporter plans." },
+          ].map((f) => (
+            <div key={f.title} className="rounded-3xl border border-zinc-200 p-6">
+              <p className="text-sm font-medium">{f.title}</p>
+              <p className="mt-2 text-sm text-zinc-600">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <footer id="about" className="border-t border-zinc-200">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-10 text-sm text-zinc-600 md:flex-row md:items-center md:justify-between">
+          <p>© {new Date().getFullYear()} Jefftopia. A serious build for a silly idea.</p>
+          <p className="text-zinc-500">Made with Next.js, TypeScript, Tailwind.</p>
+        </div>
+      </footer>
+    </main>
   );
 }
