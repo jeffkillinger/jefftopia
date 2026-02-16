@@ -1,0 +1,7 @@
+<svg width="640" height="480" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="480" rx="32" fill="#F4F4F5"/>
+  <path d="M150 270C150 193 212 130 289 130H351C428 130 490 193 490 270V290H150V270Z" fill="#18181B"/>
+  <path d="M120 290H520C520 329 488 360 449 360H191C152 360 120 329 120 290Z" fill="#27272A"/>
+  <path d="M470 290C470 322 444 348 412 348H228C196 348 170 322 170 290H470Z" fill="#3F3F46"/>
+  <text x="320" y="260" text-anchor="middle" fill="#FAFAFA" font-size="54" font-family="Arial, sans-serif" font-weight="700">J</text>
+</svg>

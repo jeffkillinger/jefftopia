@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -10,6 +12,9 @@ export default function Home() {
         </div>
 
         <nav className="flex items-center gap-4 text-sm">
+          <Link className="text-zinc-600 hover:text-zinc-900" href="/store">
+            Store
+          </Link>
           <a className="text-zinc-600 hover:text-zinc-900" href="#features">
             Features
           </a>
@@ -43,6 +48,12 @@ export default function Home() {
             <button className="rounded-xl bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800">
               Get started
             </button>
+            <Link
+              className="rounded-xl border border-zinc-200 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+              href="/store"
+            >
+              Shop merch
+            </Link>
             <button className="rounded-xl border border-zinc-200 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50">
               See the roadmap
             </button>
