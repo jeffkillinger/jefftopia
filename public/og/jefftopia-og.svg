@@ -1,0 +1,9 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0D1112"/>
+  <rect x="56" y="56" width="1088" height="518" rx="28" fill="#111A1D" stroke="#263339"/>
+  <text x="108" y="230" fill="#E7EEF0" font-family="Arial, sans-serif" font-size="58" font-weight="700">Jeff Killinger</text>
+  <text x="108" y="292" fill="#9AB1BA" font-family="Arial, sans-serif" font-size="36">Software Engineer</text>
+  <text x="108" y="376" fill="#C9D7DC" font-family="Arial, sans-serif" font-size="26">Frontend architecture, API systems, and real production delivery.</text>
+  <rect x="108" y="434" width="236" height="54" rx="27" fill="#0E7490"/>
+  <text x="226" y="468" fill="#E8FCFF" font-family="Arial, sans-serif" font-size="22" text-anchor="middle">jefftopia.dev</text>
+</svg>

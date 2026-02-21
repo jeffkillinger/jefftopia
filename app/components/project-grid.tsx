@@ -73,6 +73,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
           <Link
             key={project.slug}
             href={`/jeff/${project.slug}`}
+            prefetch={false}
             className="group rounded-2xl border border-stone-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-stone-300"
           >
             <p className="text-sm text-stone-500">{project.dateAdded}</p>

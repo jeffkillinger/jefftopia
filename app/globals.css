@@ -1,12 +1,45 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: "Satoshi", "Avenir Next", "Inter", "Segoe UI", sans-serif;
-  --color-canvas: #f7f6f3;
-  --color-ink: #111111;
+  --font-sans: "Satoshi", "Avenir Next", "Segoe UI", sans-serif;
+  --color-canvas: #f6f7f7;
+  --color-ink: #111827;
+}
+
+:root {
+  color-scheme: light dark;
 }
 
 body {
   font-family: var(--font-sans);
-  background-image: radial-gradient(circle at 0% 0%, #ffffff 0%, #f7f6f3 48%, #f2f0ea 100%);
+  background-image: radial-gradient(circle at 10% -10%, #ffffff 0%, #f2f6f8 45%, #eef2f3 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: radial-gradient(circle at 10% -10%, #1b2326 0%, #13191c 48%, #0d1112 100%);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    animation: fade-in 420ms ease both;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #0e7490;
+  outline-offset: 2px;
 }
