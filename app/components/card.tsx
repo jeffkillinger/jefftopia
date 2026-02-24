@@ -6,7 +6,8 @@ type CardProps = {
   title: string;
   description: string;
   href: string;
-  tags: string[];
+  tags?: string[];
+  focus?: string;
   ctaLabel: string;
   imageAlt: string;
   imageSrc?: string;
@@ -16,7 +17,8 @@ export function Card({
   title,
   description,
   href,
-  tags,
+  tags = [],
+  focus,
   ctaLabel,
   imageAlt,
   imageSrc = "/images/placeholders/case-study-thumb.svg",
@@ -36,14 +38,21 @@ export function Card({
       </div>
       <div className="space-y-4 p-5">
         <div>
+          {focus ? (
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] text-cyan-700 dark:text-cyan-300">
+              Focus: {focus}
+            </p>
+          ) : null}
           <h3 className="text-lg font-semibold tracking-tight text-stone-950 dark:text-stone-100">{title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-stone-700 dark:text-stone-300">{description}</p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <Tag key={`${title}-${tag}`} label={tag} />
-          ))}
-        </div>
+        {tags.length > 0 ? (
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <Tag key={`${title}-${tag}`} label={tag} />
+            ))}
+          </div>
+        ) : null}
         <Link
           href={href}
           prefetch={shouldPrefetch}

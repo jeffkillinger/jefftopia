@@ -7,7 +7,7 @@ import { projects } from "@/src/projects";
 export const metadata: Metadata = {
   title: "Lab",
   description:
-    "Jefftopia Lab for experimental side projects, including Jeffipedia and future prototype concepts.",
+    "Lab for experimental side projects, including Jeffipedia and future prototype concepts.",
 };
 
 export default function LabPage() {

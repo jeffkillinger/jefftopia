@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Jeff Killinger",
   },
   description: siteDescription,
-  applicationName: "Jefftopia",
+  applicationName: "Jeff Killinger",
   keywords: [
     "Jeff Killinger",
     "Software Engineer",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: siteDescription,
     type: "website",
     url: "https://jefftopia.dev",
-    siteName: "Jefftopia",
+    siteName: "Jeff Killinger",
     images: [
       {
         url: "/og/jefftopia-og.svg",
