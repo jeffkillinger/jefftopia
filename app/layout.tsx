@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { SiteLayout } from "@/app/components/site-layout";
 import "./globals.css";
 
+if (process.env.NODE_ENV === "development" && process.env.MEM_WATCH === "1") {
+  void import("../scripts/dev-mem-watch.mjs");
+}
+
 const siteTitle = "Jeff Killinger | Software Engineer";
 const siteDescription =
   "Senior software engineering portfolio focused on frontend architecture, API integration, cloud delivery, and production systems.";
