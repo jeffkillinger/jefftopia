@@ -181,39 +181,6 @@ export default function HomePage() {
         </ul>
       </section>
 
-      <section className="rounded-2xl border border-cyan-200/70 bg-cyan-50/60 p-6 dark:border-cyan-900/70 dark:bg-cyan-950/30">
-        <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
-          <div className="space-y-2">
-            <h2 className="text-xl font-semibold tracking-tight text-stone-950 dark:text-stone-100">
-              Lab / Experiments
-            </h2>
-            <p className="max-w-xl text-sm leading-relaxed text-stone-700 dark:text-stone-300">
-              Jeffipedia and future absurd projects live in a separate playground so core portfolio work
-              stays clear and focused.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <Link
-              href="/jeff/jeffipedia"
-              prefetch={false}
-              className="rounded-full border border-cyan-300 bg-white px-4 py-2 text-sm font-semibold text-cyan-800 transition hover:bg-cyan-100 dark:border-cyan-800 dark:bg-cyan-950 dark:text-cyan-200 dark:hover:bg-cyan-900"
-            >
-              Jeffipedia
-            </Link>
-            <Link
-              href="/lab"
-              className="rounded-full border border-cyan-300 bg-white px-4 py-2 text-sm font-semibold text-cyan-800 transition hover:bg-cyan-100 dark:border-cyan-800 dark:bg-cyan-950 dark:text-cyan-200 dark:hover:bg-cyan-900"
-            >
-              Future Jeff Projects
-            </Link>
-          </div>
-        </div>
-        <div className="mt-4 flex flex-wrap gap-2">
-          <Tag label="Experimental" />
-          <Tag label="Playful" />
-          <Tag label="Separate from production work" />
-        </div>
-      </section>
     </div>
   );
 }

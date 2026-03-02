@@ -8,7 +8,6 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
   { href: "/experience", label: "Experience" },
-  { href: "/lab", label: "Lab" },
 ];
 
 export function SiteLayout({ children }: SiteLayoutProps) {

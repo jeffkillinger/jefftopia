@@ -23,8 +23,6 @@ export function Card({
   imageAlt,
   imageSrc = "/images/placeholders/case-study-thumb.svg",
 }: CardProps) {
-  const shouldPrefetch = href.startsWith("/jeff/") ? false : undefined;
-
   return (
     <article className="group fade-in overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm transition hover:-translate-y-1 hover:border-stone-300 dark:border-stone-800 dark:bg-stone-950">
       <div className="relative aspect-[16/9] overflow-hidden border-b border-stone-200/80 bg-stone-100 dark:border-stone-800 dark:bg-stone-900">
@@ -55,7 +53,6 @@ export function Card({
         ) : null}
         <Link
           href={href}
-          prefetch={shouldPrefetch}
           className="inline-flex items-center text-sm font-semibold text-cyan-700 transition hover:text-cyan-600 dark:text-cyan-300 dark:hover:text-cyan-200"
         >
           {ctaLabel}

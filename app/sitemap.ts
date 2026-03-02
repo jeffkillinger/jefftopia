@@ -7,10 +7,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/projects",
     "/experience",
-    "/lab",
-    "/jeff/jeffipedia",
-    "/jeff/jeff-noise",
-    "/jeff/jeff-mirror",
   ].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
