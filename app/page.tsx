@@ -73,9 +73,6 @@ export default function HomePage() {
     <div className="space-y-20 py-12 md:py-16">
       <section className="fade-in grid items-center gap-8 md:grid-cols-[minmax(0,1.15fr)_minmax(280px,0.85fr)] md:gap-10">
         <div className="space-y-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700 dark:text-cyan-300">
-            Software Engineering Portfolio
-          </p>
           <h1 className="text-4xl font-semibold tracking-tight text-stone-950 md:text-6xl dark:text-stone-100">
             Jeff Killinger
           </h1>

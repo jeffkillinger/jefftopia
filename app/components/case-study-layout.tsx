@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Tag } from "@/app/components/tag";
 import type { CaseStudy } from "@/src/data/case-studies";
 
 type CaseStudyLayoutProps = {
@@ -25,11 +24,6 @@ export function CaseStudyLayout({ study }: CaseStudyLayoutProps) {
             {study.title}
           </h2>
           <p className="text-sm leading-relaxed text-stone-700 dark:text-stone-300">{study.summary}</p>
-          <div className="flex flex-wrap gap-2">
-            {study.technologies.map((technology) => (
-              <Tag key={`${study.slug}-${technology}`} label={technology} />
-            ))}
-          </div>
           <a
             href={study.liveUrl}
             target="_blank"
@@ -112,15 +106,6 @@ export function CaseStudyLayout({ study }: CaseStudyLayoutProps) {
             </li>
           ))}
         </ul>
-      </section>
-
-      <section className="space-y-2">
-        <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">Technologies Used</h3>
-        <div className="flex flex-wrap gap-2">
-          {study.technologies.map((technology) => (
-            <Tag key={`${study.slug}-stack-${technology}`} label={technology} />
-          ))}
-        </div>
       </section>
     </article>
   );

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const highlights = [
-  "Built and maintained React/Next.js applications for high-traffic academic and admissions platforms.",
+  "Built and maintained React/Gatsby applications for high-traffic academic and admissions platforms.",
   "Integrated GraphQL and REST services to power dynamic content, forms, and data-driven UX.",
   "Designed frontend architecture patterns and reusable component systems across multiple sites.",
   "Collaborated with CMS teams to align content modeling with engineering constraints.",
@@ -19,12 +19,11 @@ const highlights = [
   "Contributed to system design decisions balancing editorial flexibility, scalability, and maintainability.",
 ];
 
-const skills = ["React", "Next.js", "TypeScript", "GraphQL", "REST", "CI/CD", "CMS", "Accessibility"];
+const skills = ["React", "Gatsby", "GraphQL", "REST", "Contentful", "Netlify", "CI/CD", "CMS", "Accessibility"];
 
 export default function ExperiencePage() {
   return (
     <PageLayout
-      eyebrow="Professional Experience"
       title="Experience"
       description="Production-focused engineering work with long-term ownership, architecture responsibility, and collaborative delivery."
     >

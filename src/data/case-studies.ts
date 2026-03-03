@@ -25,7 +25,7 @@ export const caseStudies: CaseStudy[] = [
     role:
       "Frontend architecture lead and implementation owner for admissions web experiences across recruitment, application guidance, and conversion-focused content.",
     architectureOverview:
-      "Built a modular React and Next.js frontend with CMS-driven content models, shared UI primitives, and API-backed data modules for forms, event information, and campaign landing pages.",
+      "Built a modular React and Gatsby frontend with CMS-driven content models, shared UI primitives, and API-backed data modules for forms, event information, and campaign landing pages.",
     technicalDecisions: [
       "Standardized page composition using reusable section modules to reduce one-off templates.",
       "Introduced typed API clients for admissions-related endpoints and content services.",
@@ -54,7 +54,7 @@ export const caseStudies: CaseStudy[] = [
       "Used staged environments for stakeholder signoff before production promotion.",
       "Rolled out high-impact changes incrementally with monitoring and rollback plans.",
     ],
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "GraphQL", "REST", "CMS APIs"],
+    technologies: ["Gatsby", "React", "TypeScript", "Tailwind CSS", "GraphQL", "REST", "CMS APIs"],
   },
   {
     slug: "uchicago-summer-programs",
@@ -94,7 +94,7 @@ export const caseStudies: CaseStudy[] = [
       "Integrated quality gates for linting, testing, and bundle validation.",
       "Used release coordination with content and program teams to minimize launch risk.",
     ],
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "REST APIs", "CI/CD"],
+    technologies: ["Gatsby", "React", "TypeScript", "Tailwind CSS", "REST APIs", "CI/CD"],
   },
   {
     slug: "uchicago-financial-aid",
@@ -174,6 +174,6 @@ export const caseStudies: CaseStudy[] = [
       "Deployed through controlled promotion gates with rollback support.",
       "Tracked runtime metrics and error logs as part of post-release validation.",
     ],
-    technologies: ["Next.js", "React", "TypeScript", "GraphQL", "REST", "CI/CD", "Cloud Hosting"],
+    technologies: ["Gatsby", "React", "TypeScript", "GraphQL", "REST", "CI/CD", "Cloud Hosting"],
   },
 ];

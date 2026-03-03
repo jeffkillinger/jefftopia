@@ -5,7 +5,6 @@ type SiteLayoutProps = {
 };
 
 const navItems = [
-  { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
   { href: "/experience", label: "Experience" },
 ];
@@ -16,7 +15,7 @@ export function SiteLayout({ children }: SiteLayoutProps) {
       <header className="sticky top-0 z-20 border-b border-stone-200/80 bg-white/90 backdrop-blur dark:border-stone-800 dark:bg-stone-950/90">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4">
           <Link href="/" className="text-base font-semibold tracking-tight text-stone-950 dark:text-stone-100">
-            Jeff Killinger
+            Home
           </Link>
           <nav aria-label="Primary" className="flex items-center gap-1 text-sm md:gap-2">
             {navItems.map((item) => (
