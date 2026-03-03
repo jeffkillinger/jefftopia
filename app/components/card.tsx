@@ -10,7 +10,7 @@ type CardProps = {
   focus?: string;
   ctaLabel: string;
   imageAlt: string;
-  imageSrc?: string;
+  imageSrc: string;
 };
 
 export function Card({
@@ -21,17 +21,18 @@ export function Card({
   focus,
   ctaLabel,
   imageAlt,
-  imageSrc = "/images/placeholders/case-study-thumb.svg",
+  imageSrc,
 }: CardProps) {
   return (
     <article className="group fade-in overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm transition hover:-translate-y-1 hover:border-stone-300 dark:border-stone-800 dark:bg-stone-950">
-      <div className="relative aspect-[16/9] overflow-hidden border-b border-stone-200/80 bg-stone-100 dark:border-stone-800 dark:bg-stone-900">
+      <div className="overflow-hidden border-b border-stone-200/80 bg-stone-100 dark:border-stone-800 dark:bg-stone-900">
         <Image
           src={imageSrc}
           alt={imageAlt}
-          fill
+          width={1000}
+          height={625}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover"
+          className="w-full h-auto object-cover"
         />
       </div>
       <div className="space-y-4 p-5">

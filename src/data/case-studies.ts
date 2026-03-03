@@ -1,6 +1,7 @@
 export type CaseStudy = {
   slug: string;
   title: string;
+  imageSrc: string;
   liveUrl: string;
   summary: string;
   role: string;
@@ -19,6 +20,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "uchicago-admissions-ecosystem",
     title: "UChicago Admissions Ecosystem",
+    imageSrc: "/images/projects/college-admissions.webp",
     liveUrl: "https://collegeadmissions.uchicago.edu/",
     summary:
       "I led frontend architecture and implementation for the admissions ecosystem, aligning multiple stakeholder teams on a shared component model and content publishing workflow.",
@@ -59,6 +61,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "uchicago-summer-programs",
     title: "Summer Programs",
+    imageSrc: "/images/projects/summer-programs.webp",
     liveUrl: "https://summer.uchicago.edu/",
     summary:
       "I led frontend architecture and implementation for the Summer Programs site, delivering a scalable enrollment-focused platform for diverse program offerings and audiences.",
@@ -99,6 +102,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "uchicago-financial-aid",
     title: "Financial Aid",
+    imageSrc: "/images/projects/financial-aid.webp",
     liveUrl: "https://financialaid.uchicago.edu/",
     summary:
       "I led frontend architecture and implementation for the Financial Aid website, focusing on clarity, trust, and maintainability for high-stakes student and family workflows.",
@@ -139,6 +143,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "uchicago-career-advancement",
     title: "Career Advancement",
+    imageSrc: "/images/projects/career-advancement.webp",
     liveUrl: "https://careeradvancement.uchicago.edu/",
     summary:
       "I led frontend architecture and implementation for Career Advancement, modernizing content delivery and improving discoverability of services, events, and student resources.",

@@ -19,6 +19,7 @@ const highlightedProjects = [
     description:
       "Led frontend architecture for admissions pathways, delivering reusable components and API-backed content models for consistent launch velocity.",
     focus: "Admissions funnel",
+    imageSrc: "/images/projects/college-admissions.webp",
   },
   {
     title: "Summer Programs",
@@ -26,6 +27,7 @@ const highlightedProjects = [
     description:
       "Built enrollment-focused templates and publishing workflows that scaled campaign execution across seasonal program launches.",
     focus: "Enrollment growth",
+    imageSrc: "/images/projects/summer-programs.webp",
   },
   {
     title: "Financial Aid",
@@ -33,6 +35,7 @@ const highlightedProjects = [
     description:
       "Owned information architecture and service integration for high-stakes aid journeys, improving clarity and accessibility for applicants.",
     focus: "Financial aid UX",
+    imageSrc: "/images/projects/financial-aid.webp",
   },
   {
     title: "Career Advancement",
@@ -40,6 +43,7 @@ const highlightedProjects = [
     description:
       "Delivered a modular system for events, advising, and multi-audience journeys with maintainable patterns for long-term content evolution.",
     focus: "Adult learners",
+    imageSrc: "/images/projects/career-advancement.webp",
   },
 ];
 
@@ -157,6 +161,7 @@ export default function HomePage() {
               focus={project.focus}
               ctaLabel="View Case Study"
               imageAlt={`${project.title} preview`}
+              imageSrc={project.imageSrc}
             />
           ))}
         </div>

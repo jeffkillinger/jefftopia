@@ -8,34 +8,33 @@ type CaseStudyLayoutProps = {
 export function CaseStudyLayout({ study }: CaseStudyLayoutProps) {
   return (
     <article className="fade-in space-y-7 rounded-2xl border border-stone-200/80 bg-white p-6 shadow-sm md:p-8 dark:border-stone-800 dark:bg-stone-950">
-      <div className="grid gap-6 lg:grid-cols-[2fr_3fr] lg:items-start">
-        <div className="relative aspect-[16/9] overflow-hidden rounded-xl border border-stone-200/80 bg-stone-100 dark:border-stone-800 dark:bg-stone-900">
-          <Image
-            src="/images/placeholders/case-study-thumb.svg"
-            alt={`${study.title} thumbnail placeholder`}
-            fill
-            sizes="(max-width: 1024px) 100vw, 40vw"
-            className="object-cover"
-          />
-        </div>
+      <div className="space-y-4">
+        <h2 className="text-2xl font-semibold tracking-tight text-stone-950 dark:text-stone-100">
+          {study.title}
+        </h2>
+        <p className="text-sm leading-relaxed text-stone-700 dark:text-stone-300">{study.summary}</p>
+        <a
+          href={study.liveUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center text-sm font-semibold text-cyan-700 transition hover:text-cyan-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+        >
+          Visit Live Site
+          <span aria-hidden="true" className="ml-1">
+            ↗
+          </span>
+        </a>
+      </div>
 
-        <div className="space-y-4">
-          <h2 className="text-2xl font-semibold tracking-tight text-stone-950 dark:text-stone-100">
-            {study.title}
-          </h2>
-          <p className="text-sm leading-relaxed text-stone-700 dark:text-stone-300">{study.summary}</p>
-          <a
-            href={study.liveUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center text-sm font-semibold text-cyan-700 transition hover:text-cyan-600 dark:text-cyan-300 dark:hover:text-cyan-200"
-          >
-            Visit Live Site
-            <span aria-hidden="true" className="ml-1">
-              ↗
-            </span>
-          </a>
-        </div>
+      <div className="mt-6 mb-10">
+        <Image
+          src={study.imageSrc}
+          alt={`${study.title} homepage screenshot`}
+          width={1400}
+          height={875}
+          className="w-full h-auto rounded-2xl object-cover shadow-sm"
+          priority
+        />
       </div>
 
       <section className="space-y-2">
