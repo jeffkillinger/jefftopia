@@ -5,6 +5,38 @@ type CaseStudyLayoutProps = {
   study: CaseStudy;
 };
 
+function CaseStudyImageStack({ study, className }: { study: CaseStudy; className?: string }) {
+  return (
+    <div className={className}>
+      <div>
+        <p className="mb-2 text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400">Homepage</p>
+        <div className="overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm dark:border-stone-800 dark:bg-stone-900">
+          <Image
+            src={study.imageSrc}
+            alt={`${study.title} homepage screenshot`}
+            width={1400}
+            height={875}
+            className="h-auto w-full object-cover"
+            priority
+          />
+        </div>
+      </div>
+      <div className="mt-4">
+        <p className="mb-2 text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400">Internal page</p>
+        <div className="overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm dark:border-stone-800 dark:bg-stone-900">
+          <Image
+            src="/images/projects/internal-placeholder.webp"
+            alt="Internal page screenshot placeholder"
+            width={1400}
+            height={875}
+            className="h-auto w-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function CaseStudyLayout({ study }: CaseStudyLayoutProps) {
   return (
     <article className="fade-in space-y-7 rounded-2xl border border-stone-200/80 bg-white p-6 shadow-sm md:p-8 dark:border-stone-800 dark:bg-stone-950">
@@ -28,16 +60,7 @@ export function CaseStudyLayout({ study }: CaseStudyLayoutProps) {
             </a>
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm lg:hidden dark:border-stone-800 dark:bg-stone-900">
-            <Image
-              src={study.imageSrc}
-              alt={`${study.title} homepage screenshot`}
-              width={1400}
-              height={875}
-              className="h-auto w-full object-cover"
-              priority
-            />
-          </div>
+          <CaseStudyImageStack study={study} className="lg:hidden" />
 
           <div className="space-y-6">
             <section className="space-y-2">
@@ -70,16 +93,7 @@ export function CaseStudyLayout({ study }: CaseStudyLayoutProps) {
           </div>
         </div>
 
-        <div className="hidden overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm lg:block dark:border-stone-800 dark:bg-stone-900">
-          <Image
-            src={study.imageSrc}
-            alt={`${study.title} homepage screenshot`}
-            width={1400}
-            height={875}
-            className="h-auto max-h-[420px] w-full object-cover object-top"
-            priority
-          />
-        </div>
+        <CaseStudyImageStack study={study} className="hidden lg:block" />
       </section>
 
       <section className="space-y-2">
