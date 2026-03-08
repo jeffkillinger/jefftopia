@@ -9,7 +9,7 @@ import { Tag } from "@/app/components/tag";
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Jeff Killinger is a software engineer focused on frontend systems, API integration, cloud deployments, and production-ready architecture.",
+    "Jeff Killinger is a solutions engineer and web developer focused on API-driven SaaS systems, composable architecture, and scalable frontend delivery.",
 };
 
 const highlightedProjects = [
@@ -60,12 +60,12 @@ const coreStack = [
 ];
 
 const technicalFocus = [
-  "React and modern frontend architecture",
-  "API-driven systems across GraphQL and REST",
-  "Cloud-native deployment and release workflows",
-  "Performance and accessibility engineering",
-  "AI-assisted development workflows",
-  "Design systems and component libraries",
+  "Composable architecture and platform thinking",
+  "Headless CMS modeling and content operations",
+  "API integrations across GraphQL and REST",
+  "Scalable frontend systems in React and Gatsby",
+  "Technical communication and stakeholder alignment",
+  "Performance, accessibility, and production delivery",
 ];
 
 // Drop your headshot at /public/images/jeff-killinger.jpg
@@ -80,11 +80,18 @@ export default function HomePage() {
           <h1 className="text-4xl font-semibold tracking-tight text-stone-950 md:text-6xl dark:text-stone-100">
             Jeff Killinger
           </h1>
-          <p className="text-xl font-medium text-stone-800 dark:text-stone-200">Software Engineer</p>
+          <p className="text-xl font-medium text-stone-800 dark:text-stone-200">
+            Solutions Engineer / Web Developer
+          </p>
           <p className="max-w-prose text-base leading-relaxed text-stone-700 md:max-w-[min(50vw,42rem)] md:text-lg dark:text-stone-300">
-            I design and ship production web systems with an emphasis on scalable frontend architecture,
-            API integration, and dependable delivery pipelines. My work combines technical rigor,
-            maintainable implementation, and practical product thinking.
+            I design and build API-driven SaaS systems with a focus on headless CMS and composable
+            architecture. My work spans scalable frontend implementation, structured integrations across
+            GraphQL and REST APIs, and clear technical communication with cross-functional teams. I am
+            especially interested in onboarding, personalization, and billing flows that hold up in production.
+          </p>
+          <p className="max-w-prose text-sm leading-relaxed text-stone-600 md:max-w-[min(50vw,42rem)] md:text-base dark:text-stone-400">
+            Currently building a multi-tenant SaaS platform that combines CMS-driven content, rule-based
+            personalization, and Stripe subscription logic.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
@@ -138,7 +145,7 @@ export default function HomePage() {
             Selected Work
           </h2>
           <p className="text-sm text-stone-700 dark:text-stone-300">
-            Featured case studies focused on architecture, integration, and production execution.
+            Case studies in composable platform delivery, API integration strategy, and production implementation.
           </p>
           <div className="pt-2">
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-600 dark:text-stone-300">
