@@ -9,7 +9,6 @@ function CaseStudyImageStack({ study, className }: { study: CaseStudy; className
   return (
     <div className={className}>
       <div>
-        <p className="mb-2 text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400">Homepage</p>
         <div className="overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm dark:border-stone-800 dark:bg-stone-900">
           <Image
             src={study.imageSrc}
@@ -54,20 +53,6 @@ export function CaseStudyLayout({ study }: CaseStudyLayoutProps) {
             <section className="space-y-2">
               <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">My Role</h3>
               <p className="text-sm leading-relaxed text-stone-700 dark:text-stone-300">{study.role}</p>
-            </section>
-
-            <section className="space-y-2">
-              <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">Architecture</h3>
-              <ul className="space-y-2 text-sm leading-relaxed text-stone-700 dark:text-stone-300">
-                {study.architecture.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <span aria-hidden="true" className="text-cyan-700 dark:text-cyan-300">
-                      •
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
             </section>
 
             <section className="space-y-2">
