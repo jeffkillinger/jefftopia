@@ -21,18 +21,6 @@ function CaseStudyImageStack({ study, className }: { study: CaseStudy; className
           />
         </div>
       </div>
-      <div className="mt-4">
-        <p className="mb-2 text-xs uppercase tracking-wide text-stone-500 dark:text-stone-400">Internal page</p>
-        <div className="overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm dark:border-stone-800 dark:bg-stone-900">
-          <Image
-            src="/images/projects/internal-placeholder.webp"
-            alt="Internal page screenshot placeholder"
-            width={1400}
-            height={875}
-            className="h-auto w-full object-cover"
-          />
-        </div>
-      </div>
     </div>
   );
 }
@@ -64,23 +52,28 @@ export function CaseStudyLayout({ study }: CaseStudyLayoutProps) {
 
           <div className="space-y-6">
             <section className="space-y-2">
-              <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">Architecture Overview</h3>
-              <p className="text-sm leading-relaxed text-stone-700 dark:text-stone-300">
-                {study.architectureOverview}
-              </p>
-            </section>
-
-            <section className="space-y-2">
-              <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">
-                My Role and Responsibilities
-              </h3>
+              <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">My Role</h3>
               <p className="text-sm leading-relaxed text-stone-700 dark:text-stone-300">{study.role}</p>
             </section>
 
             <section className="space-y-2">
-              <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">Key Technical Decisions</h3>
+              <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">Architecture</h3>
               <ul className="space-y-2 text-sm leading-relaxed text-stone-700 dark:text-stone-300">
-                {study.technicalDecisions.map((decision) => (
+                {study.architecture.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span aria-hidden="true" className="text-cyan-700 dark:text-cyan-300">
+                      •
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="space-y-2">
+              <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">Key Decisions</h3>
+              <ul className="space-y-2 text-sm leading-relaxed text-stone-700 dark:text-stone-300">
+                {study.keyDecisions.map((decision) => (
                   <li key={decision} className="flex gap-2">
                     <span aria-hidden="true" className="text-cyan-700 dark:text-cyan-300">
                       •
@@ -97,44 +90,14 @@ export function CaseStudyLayout({ study }: CaseStudyLayoutProps) {
       </section>
 
       <section className="space-y-2">
-        <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">Challenges and Solutions</h3>
-        <ul className="space-y-3 text-sm leading-relaxed text-stone-700 dark:text-stone-300">
-          {study.challengesAndSolutions.map((item) => (
-            <li key={item.challenge} className="rounded-xl border border-stone-200/80 bg-stone-50 p-4 dark:border-stone-800 dark:bg-stone-900/50">
-              <p>
-                <span className="font-semibold text-stone-900 dark:text-stone-100">Challenge:</span> {item.challenge}
-              </p>
-              <p className="mt-1">
-                <span className="font-semibold text-stone-900 dark:text-stone-100">Solution:</span> {item.solution}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="space-y-2">
-        <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">Performance Improvements</h3>
+        <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">Impact</h3>
         <ul className="space-y-2 text-sm leading-relaxed text-stone-700 dark:text-stone-300">
-          {study.performanceImprovements.map((improvement) => (
+          {study.impact.map((improvement) => (
             <li key={improvement} className="flex gap-2">
               <span aria-hidden="true" className="text-cyan-700 dark:text-cyan-300">
                 •
               </span>
               <span>{improvement}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="space-y-2">
-        <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100">Deployment Approach</h3>
-        <ul className="space-y-2 text-sm leading-relaxed text-stone-700 dark:text-stone-300">
-          {study.deploymentApproach.map((step) => (
-            <li key={step} className="flex gap-2">
-              <span aria-hidden="true" className="text-cyan-700 dark:text-cyan-300">
-                •
-              </span>
-              <span>{step}</span>
             </li>
           ))}
         </ul>

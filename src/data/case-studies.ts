@@ -5,15 +5,9 @@ export type CaseStudy = {
   liveUrl: string;
   summary: string;
   role: string;
-  architectureOverview: string;
-  technicalDecisions: string[];
-  challengesAndSolutions: Array<{
-    challenge: string;
-    solution: string;
-  }>;
-  performanceImprovements: string[];
-  deploymentApproach: string[];
-  technologies: string[];
+  architecture: string[];
+  keyDecisions: string[];
+  impact: string[];
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -23,40 +17,25 @@ export const caseStudies: CaseStudy[] = [
     imageSrc: "/images/projects/college-admissions.webp",
     liveUrl: "https://collegeadmissions.uchicago.edu/",
     summary:
-      "I led frontend architecture and implementation for the admissions ecosystem, aligning multiple stakeholder teams on a shared component model and content publishing workflow.",
+      "Primary admissions site for prospective students, built to unify recruitment, application guidance, and conversion journeys across a complex editorial organization. It established the platform patterns later reused across other admissions properties.",
     role:
-      "Frontend architecture lead and implementation owner for admissions web experiences across recruitment, application guidance, and conversion-focused content.",
-    architectureOverview:
-      "Built a modular React and Gatsby frontend with CMS-driven content models, shared UI primitives, and API-backed data modules for forms, event information, and campaign landing pages.",
-    technicalDecisions: [
-      "Standardized page composition using reusable section modules to reduce one-off templates.",
-      "Introduced typed API clients for admissions-related endpoints and content services.",
-      "Implemented progressive enhancement for interactive tools to keep key pages resilient.",
-      "Defined accessibility-first component requirements as a merge gate in code review.",
+      "I led frontend architecture for the shared admissions platform, defining component patterns, integration boundaries, and implementation standards.",
+    architecture: [
+      "React and Gatsby frontend",
+      "Contentful content models",
+      "GraphQL data layer",
+      "Shared component and deployment workflows",
     ],
-    challengesAndSolutions: [
-      {
-        challenge: "High content velocity from multiple non-engineering teams.",
-        solution:
-          "Designed a predictable CMS schema and a constrained component library so editors could build pages safely without engineering intervention.",
-      },
-      {
-        challenge: "Inconsistent UX patterns across legacy admissions pages.",
-        solution:
-          "Created a shared design token layer and migration playbook to unify hierarchy, spacing, and interaction behavior.",
-      },
+    keyDecisions: [
+      "Designed composable page modules so editorial teams could assemble landing pages without one-off templates.",
+      "Separated CMS content from service integrations to keep application guidance pages stable as backend inputs changed.",
+      "Used accessibility requirements and design tokens as platform constraints to keep patterns consistent across teams.",
     ],
-    performanceImprovements: [
-      "Reduced render-blocking assets by consolidating scripts and eliminating legacy dependencies.",
-      "Improved Core Web Vitals through image sizing discipline, lazy loading, and route-level code splitting.",
-      "Added routine Lighthouse checks during release validation.",
+    impact: [
+      "Created the architectural baseline for four admissions sites on one platform.",
+      "Reduced content publishing friction by giving editors reusable, governed page building blocks.",
+      "Improved consistency across recruitment journeys, accessibility standards, and release quality.",
     ],
-    deploymentApproach: [
-      "Automated CI pipelines for linting, type checks, and production build validation.",
-      "Used staged environments for stakeholder signoff before production promotion.",
-      "Rolled out high-impact changes incrementally with monitoring and rollback plans.",
-    ],
-    technologies: ["Gatsby", "React", "TypeScript", "Tailwind CSS", "GraphQL", "REST", "CMS APIs"],
   },
   {
     slug: "uchicago-summer-programs",
@@ -64,40 +43,25 @@ export const caseStudies: CaseStudy[] = [
     imageSrc: "/images/projects/summer-programs.webp",
     liveUrl: "https://summer.uchicago.edu/",
     summary:
-      "I led frontend architecture and implementation for the Summer Programs site, delivering a scalable enrollment-focused platform for diverse program offerings and audiences.",
+      "Enrollment-focused site for pre-college and summer offerings, designed to help distinct audiences compare programs and move quickly toward inquiry or application. The challenge was supporting high seasonal content turnover without fragmenting the experience.",
     role:
-      "Lead frontend engineer responsible for component architecture, integration patterns, and release quality for the summer programs web platform.",
-    architectureOverview:
-      "Implemented a structured frontend system with reusable content blocks, program metadata surfaces, and API-backed search/filter patterns to support rapid program updates.",
-    technicalDecisions: [
-      "Modeled program data with typed interfaces to support filtering and cross-linking experiences.",
-      "Adopted route-level data fetching boundaries to keep pages fast under high traffic periods.",
-      "Built flexible CTA and form components that could support campaign-specific requirements.",
-      "Prioritized semantic HTML patterns for accessibility and SEO durability.",
+      "I owned frontend architecture and implementation, aligning program discovery patterns with the shared admissions platform.",
+    architecture: [
+      "React and Gatsby frontend",
+      "Contentful program content model",
+      "GraphQL page assembly",
+      "Reusable inquiry and CTA modules",
     ],
-    challengesAndSolutions: [
-      {
-        challenge: "Frequent deadlines tied to seasonal enrollment windows.",
-        solution:
-          "Established release templates and predictable deployment checklists that shortened turnaround time without sacrificing QA.",
-      },
-      {
-        challenge: "Large amount of program variation with shared information architecture.",
-        solution:
-          "Defined composable content patterns so specialized pages could be built from the same stable system.",
-      },
+    keyDecisions: [
+      "Structured program content around reusable metadata so listings, detail pages, and campaigns pulled from the same source.",
+      "Kept interactive filtering narrowly scoped to preserve static performance during peak enrollment periods.",
+      "Standardized conversion components so marketing changes did not require custom engineering for each campaign.",
     ],
-    performanceImprovements: [
-      "Reduced page weight by using optimized images and removing duplicate client-side scripts.",
-      "Improved interaction latency by limiting client rendering to truly interactive sections.",
-      "Maintained Lighthouse accessibility and performance baselines during each release cycle.",
+    impact: [
+      "Made seasonal program launches faster by reusing platform patterns instead of creating campaign-specific pages.",
+      "Improved content consistency across diverse program types and audience journeys.",
+      "Supported clearer discovery and stronger conversion paths during enrollment windows.",
     ],
-    deploymentApproach: [
-      "Connected Git-based workflows to CI/CD for consistent preview and production releases.",
-      "Integrated quality gates for linting, testing, and bundle validation.",
-      "Used release coordination with content and program teams to minimize launch risk.",
-    ],
-    technologies: ["Gatsby", "React", "TypeScript", "Tailwind CSS", "REST APIs", "CI/CD"],
   },
   {
     slug: "uchicago-financial-aid",
@@ -105,40 +69,25 @@ export const caseStudies: CaseStudy[] = [
     imageSrc: "/images/projects/financial-aid.webp",
     liveUrl: "https://financialaid.uchicago.edu/",
     summary:
-      "I led frontend architecture and implementation for the Financial Aid website, focusing on clarity, trust, and maintainability for high-stakes student and family workflows.",
+      "Information-rich site for students and families navigating deadlines, policies, and affordability questions in a high-trust context. The broader goal was to make complex institutional guidance easier to scan, maintain, and update accurately.",
     role:
-      "Frontend lead for technical planning, implementation standards, and integration of aid-related content and service endpoints.",
-    architectureOverview:
-      "Delivered a content-first architecture with reusable information modules, API-integrated calculators and forms, and strict accessibility standards for critical user journeys.",
-    technicalDecisions: [
-      "Established a content hierarchy optimized for complex policy and eligibility information.",
-      "Built typed integration layers for aid and form-related services.",
-      "Created reusable FAQ and policy components to reduce duplication and drift.",
-      "Enforced keyboard and screen reader criteria for all interactive elements.",
+      "I led frontend architecture and content modeling, with responsibility for accessibility, information structure, and integration reliability.",
+    architecture: [
+      "React and Gatsby frontend",
+      "Contentful editorial system",
+      "GraphQL and service integrations",
+      "Accessible policy and FAQ components",
     ],
-    challengesAndSolutions: [
-      {
-        challenge: "Communicating dense policy information without overwhelming users.",
-        solution:
-          "Introduced progressive disclosure patterns and scannable content templates that improved comprehension.",
-      },
-      {
-        challenge: "Maintaining consistency across policy updates and deadline changes.",
-        solution:
-          "Implemented centralized content modules and publishing controls to keep updates synchronized.",
-      },
+    keyDecisions: [
+      "Modeled policy, deadline, and FAQ content as shared entries so updates stayed synchronized across the site.",
+      "Used progressive disclosure patterns to keep dense guidance readable without hiding critical information.",
+      "Defined resilient integration boundaries for calculators and forms so core content remained dependable if services changed.",
     ],
-    performanceImprovements: [
-      "Improved page speed by streamlining dependencies and minimizing unnecessary client JS.",
-      "Reduced CLS via explicit media sizing and predictable layout structure.",
-      "Improved accessibility scores through semantic heading and form control refinements.",
+    impact: [
+      "Improved clarity for high-stakes financial aid journeys across policies, deadlines, and next steps.",
+      "Reduced duplication and editorial drift through centralized content structures.",
+      "Raised trust and usability with stronger accessibility and more predictable information architecture.",
     ],
-    deploymentApproach: [
-      "Used CI pipelines to validate lint, typing, and build stability on every merge.",
-      "Released through staged verification with stakeholders and QA.",
-      "Monitored post-deploy behavior to catch and resolve regressions quickly.",
-    ],
-    technologies: ["React", "TypeScript", "GraphQL", "REST", "Tailwind CSS", "CMS", "GitHub Actions"],
   },
   {
     slug: "uchicago-career-advancement",
@@ -146,39 +95,24 @@ export const caseStudies: CaseStudy[] = [
     imageSrc: "/images/projects/career-advancement.webp",
     liveUrl: "https://careeradvancement.uchicago.edu/",
     summary:
-      "I led frontend architecture and implementation for Career Advancement, modernizing content delivery and improving discoverability of services, events, and student resources.",
+      "Career services platform for students, employers, and alumni, built to organize multiple service lines into clearer pathways. The broader problem was turning scattered resources and event information into a coherent system with durable content patterns.",
     role:
-      "Senior frontend developer driving architecture, implementation quality, and collaboration with career services teams.",
-    architectureOverview:
-      "Developed a modular frontend experience with robust content modeling, event and resource integrations, and reusable interfaces for service pathways.",
-    technicalDecisions: [
-      "Created shared card and listing systems for events, advising services, and resources.",
-      "Used typed query layers to merge CMS and service data safely.",
-      "Implemented resilient fallback patterns for API outages.",
-      "Optimized for mobile-first usage due to student engagement patterns.",
+      "I drove frontend architecture, defining reusable patterns for content, listings, and external data integrations.",
+    architecture: [
+      "React and Gatsby frontend",
+      "Contentful content structures",
+      "GraphQL plus external data adapters",
+      "Shared listing and card components",
     ],
-    challengesAndSolutions: [
-      {
-        challenge: "Multiple user types with different paths and priorities.",
-        solution:
-          "Structured navigation and page templates around clear intent-based journeys for students, employers, and alumni.",
-      },
-      {
-        challenge: "Integrating dynamic event and resource feeds reliably.",
-        solution:
-          "Built typed adapters and validation guards to normalize external data before rendering.",
-      },
+    keyDecisions: [
+      "Organized templates around user intent so students, employers, and alumni could navigate different goals without separate systems.",
+      "Normalized event and resource feeds through typed adapters before rendering them into shared UI patterns.",
+      "Built reusable listing components that could serve services, events, and resources with a consistent editorial model.",
     ],
-    performanceImprovements: [
-      "Increased mobile performance by reducing large script payloads and deferring non-critical behavior.",
-      "Improved perceived speed with consistent skeleton/loading states where data latency existed.",
-      "Maintained accessibility compliance through regular audits and targeted remediation.",
+    impact: [
+      "Improved discoverability of services, events, and resources across distinct audience groups.",
+      "Reduced maintenance overhead by consolidating multiple content types into shared platform components.",
+      "Made external data integrations more reliable and easier to evolve over time.",
     ],
-    deploymentApproach: [
-      "Established automated release checks and branch-based preview workflows.",
-      "Deployed through controlled promotion gates with rollback support.",
-      "Tracked runtime metrics and error logs as part of post-release validation.",
-    ],
-    technologies: ["Gatsby", "React", "TypeScript", "GraphQL", "REST", "CI/CD", "Cloud Hosting"],
   },
 ];

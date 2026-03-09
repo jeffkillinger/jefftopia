@@ -6,14 +6,14 @@ import { caseStudies } from "@/src/data/case-studies";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Projects from University of Chicago web platforms, including architecture decisions, API integration, performance work, and deployment strategy.",
+    "Projects from the University of Chicago Admissions Platform, highlighting shared architecture, system design decisions, and delivery outcomes.",
 };
 
 export default function ProjectsPage() {
   return (
     <PageLayout
       title="Projects"
-      description="Detailed production projects covering architecture, integration patterns, delivery workflows, and measurable engineering outcomes."
+      description="These four sites were built as part of the University of Chicago Admissions Platform, a composable web architecture using React, Gatsby, Contentful, and GraphQL to support multiple admissions programs with shared components, content models, and deployment workflows."
     >
       <div className="space-y-8">
         {caseStudies.map((study) => (
