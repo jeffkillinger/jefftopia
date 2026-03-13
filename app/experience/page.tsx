@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 const highlights = [
   "Built and maintained React and Gatsby applications for high-traffic academic and admissions platforms.",
-  "Integrated GraphQL and REST services to power structured content, forms, and data-driven user flows.",
+  "Integrated GraphQL and REST services to deliver structured content across complex admissions and academic sites.",
   "Designed frontend architecture patterns and reusable component systems across multiple sites.",
-  "Partnered with CMS teams to align content modeling with editorial needs and engineering constraints.",
+  "Designed Contentful content models and editorial structures based on requirements from admissions and program stakeholders.",
   "Implemented CI/CD quality gates for linting, type safety, and production build confidence.",
   "Led cross-functional implementation with designers, content strategists, and program stakeholders.",
   "Delivered performance and accessibility improvements aligned with Core Web Vitals and WCAG standards.",
@@ -32,7 +32,9 @@ export default function ExperiencePage() {
           <h2 className="text-2xl font-semibold tracking-tight text-stone-950 dark:text-stone-100">
             University of Chicago
           </h2>
-          <p className="text-base font-medium text-stone-800 dark:text-stone-200">Frontend Web Developer</p>
+          <p className="text-base font-medium text-stone-800 dark:text-stone-200">
+            Web Developer (Frontend Architecture & CMS Systems)
+          </p>
           <p className="text-sm text-stone-600 dark:text-stone-400">2019–2026</p>
         </header>
 
