@@ -64,6 +64,10 @@ export default function HomePage() {
             especially interested in onboarding, personalization, and billing flows that hold up in
             production.
           </p>
+          <p className="max-w-prose text-sm leading-relaxed text-stone-700 md:max-w-[min(50vw,42rem)] md:text-base dark:text-stone-300">
+            Recent work: Led frontend architecture for a multi-site admissions platform at the University
+            of Chicago used across recruitment, financial aid, and academic programs.
+          </p>
           <p className="max-w-prose text-sm leading-relaxed text-stone-600 md:max-w-[min(50vw,42rem)] md:text-base dark:text-stone-400">
             Currently building a multi-tenant SaaS platform that combines CMS-driven content, rule-based
             personalization, and Stripe subscription logic.
@@ -119,14 +123,8 @@ export default function HomePage() {
           <h2 className="text-2xl font-semibold tracking-tight text-stone-950 dark:text-stone-100">
             Selected Work
           </h2>
-          <p className="text-sm text-stone-700 dark:text-stone-300">
-            Case studies in composable platform delivery, API integration strategy, and production implementation.
-          </p>
           <div className="pt-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-stone-600 dark:text-stone-300">
-              Core Stack
-            </p>
-            <div className="mt-2 flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
               {coreStack.map((item) => (
                 <Tag key={item} label={item} />
               ))}
@@ -164,7 +162,6 @@ export default function HomePage() {
           ))}
         </ul>
       </section>
-
     </div>
   );
 }

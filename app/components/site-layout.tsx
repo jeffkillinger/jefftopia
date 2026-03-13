@@ -41,9 +41,6 @@ export function SiteLayout({ children }: SiteLayoutProps) {
       <main id="main-content" className="mx-auto w-full max-w-6xl px-5">
         {children}
       </main>
-      <footer className="mx-auto mt-12 w-full max-w-6xl border-t border-stone-200/80 px-5 py-6 text-sm text-stone-500 dark:border-stone-800 dark:text-stone-400">
-        <p>Jeff Killinger</p>
-      </footer>
     </>
   );
 }
