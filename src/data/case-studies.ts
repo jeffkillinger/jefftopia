@@ -3,6 +3,8 @@ export type CaseStudy = {
   title: string;
   imageSrc: string;
   liveUrl: string;
+  homepageDescription: string;
+  homepageFocus: string;
   summary: string;
   role: string;
   architecture: string[];
@@ -13,13 +15,16 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "uchicago-admissions-ecosystem",
-    title: "UChicago Admissions Ecosystem",
+    title: "UChicago Admissions",
     imageSrc: "/images/projects/college-admissions.webp",
     liveUrl: "https://collegeadmissions.uchicago.edu/",
+    homepageDescription:
+      "Built the primary admissions site using reusable React components and Contentful-driven content models, supporting a high-traffic admissions funnel.",
+    homepageFocus: "FOCUS: ADMISSIONS FUNNEL",
     summary:
-      "Primary admissions site for prospective students, built to unify recruitment, application guidance, and conversion journeys across a complex editorial organization. It established the platform patterns later reused across other admissions properties.",
+      "Built the primary admissions site using reusable React components and Contentful-driven content models, supporting a high-traffic admissions funnel. The platform patterns established here informed later work across related admissions properties.",
     role:
-      "I led frontend architecture for the shared admissions platform, defining component patterns, integration boundaries, and implementation standards.",
+      "I designed and built the frontend architecture for the admissions site, defining reusable component patterns, content modeling boundaries, and implementation standards for a high-traffic publishing workflow.",
     architecture: [
       "React and Gatsby frontend",
       "Contentful content models",
@@ -42,10 +47,13 @@ export const caseStudies: CaseStudy[] = [
     title: "Summer Programs",
     imageSrc: "/images/projects/summer-programs.webp",
     liveUrl: "https://summer.uchicago.edu/",
+    homepageDescription:
+      "Built course discovery tools that allow prospective students to filter summer classes by level and interest, alongside scalable course page templates that enable program teams to launch new offerings quickly.",
+    homepageFocus: "FOCUS: COURSE DISCOVERY",
     summary:
-      "Enrollment-focused site for pre-college and summer offerings, designed to help distinct audiences compare programs and move quickly toward inquiry or application. The challenge was supporting high seasonal content turnover without fragmenting the experience.",
+      "Built course discovery tools that allow prospective students to filter summer classes by level and interest, alongside scalable course page templates that enable program teams to launch new offerings quickly. The challenge was supporting high seasonal content turnover without fragmenting the experience.",
     role:
-      "I owned frontend architecture and implementation, aligning program discovery patterns with the shared admissions platform.",
+      "I owned frontend architecture and implementation for the site, aligning course discovery patterns, content structures, and reusable templates with the broader admissions platform.",
     architecture: [
       "React and Gatsby frontend",
       "Contentful program content model",
@@ -68,10 +76,13 @@ export const caseStudies: CaseStudy[] = [
     title: "Financial Aid",
     imageSrc: "/images/projects/financial-aid.webp",
     liveUrl: "https://financialaid.uchicago.edu/",
+    homepageDescription:
+      "Led the first headless CMS implementation for the financial aid site, redesigning information architecture and content structure to make complex aid pathways clearer and more accessible for applicants.",
+    homepageFocus: "FOCUS: FINANCIAL AID CLARITY",
     summary:
-      "Information-rich site for students and families navigating deadlines, policies, and affordability questions in a high-trust context. The broader goal was to make complex institutional guidance easier to scan, maintain, and update accurately.",
+      "Led the first headless CMS implementation for the financial aid site, redesigning information architecture and content structure to make complex aid pathways clearer and more accessible for applicants. The broader goal was to make dense institutional guidance easier to scan, maintain, and update accurately.",
     role:
-      "I led frontend architecture and content modeling, with responsibility for accessibility, information structure, and integration reliability.",
+      "I led frontend architecture and content modeling, with responsibility for accessibility, information structure, and reliable integration boundaries for a high-trust content experience.",
     architecture: [
       "React and Gatsby frontend",
       "Contentful editorial system",
@@ -94,10 +105,13 @@ export const caseStudies: CaseStudy[] = [
     title: "Career Advancement",
     imageSrc: "/images/projects/career-advancement.webp",
     liveUrl: "https://careeradvancement.uchicago.edu/",
+    homepageDescription:
+      "Built a modular content system supporting advising resources and career pathways for undergraduate students, with maintainable content patterns that allow program staff to manage and evolve the site over time.",
+    homepageFocus: "FOCUS: STUDENT CAREER PATHWAYS",
     summary:
-      "Career services platform for students, employers, and alumni, built to organize multiple service lines into clearer pathways. The broader problem was turning scattered resources and event information into a coherent system with durable content patterns.",
+      "Built a modular content system supporting advising resources and career pathways for undergraduate students, with maintainable content patterns that allow program staff to manage and evolve the site over time. The broader problem was turning scattered resources and event information into a coherent system.",
     role:
-      "I drove frontend architecture, defining reusable patterns for content, listings, and external data integrations.",
+      "I drove frontend architecture for the site, defining reusable patterns for advising content, listings, and external data integrations that program staff could maintain over time.",
     architecture: [
       "React and Gatsby frontend",
       "Contentful content structures",

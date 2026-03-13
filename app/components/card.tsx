@@ -39,7 +39,7 @@ export function Card({
         <div>
           {focus ? (
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] text-cyan-700 dark:text-cyan-300">
-              Focus: {focus}
+              {focus}
             </p>
           ) : null}
           <h3 className="text-lg font-semibold tracking-tight text-stone-950 dark:text-stone-100">{title}</h3>

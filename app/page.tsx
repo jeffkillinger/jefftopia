@@ -5,47 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/app/components/card";
 import { Tag } from "@/app/components/tag";
+import { caseStudies } from "@/src/data/case-studies";
 
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Jeff Killinger is a solutions engineer and web developer focused on API-driven SaaS systems, composable architecture, and scalable frontend delivery.",
+    "Jeff Killinger is a solutions architect and developer focused on API-driven SaaS systems, composable architecture, and scalable frontend delivery.",
 };
 
-const highlightedProjects = [
-  {
-    title: "UChicago Admissions Ecosystem",
-    href: "/projects#uchicago-admissions-ecosystem",
-    description:
-      "Led frontend architecture for admissions pathways, delivering reusable components and API-backed content models for consistent launch velocity.",
-    focus: "Admissions funnel",
-    imageSrc: "/images/projects/college-admissions.webp",
-  },
-  {
-    title: "Summer Programs",
-    href: "/projects#uchicago-summer-programs",
-    description:
-      "Built enrollment-focused templates and publishing workflows that scaled campaign execution across seasonal program launches.",
-    focus: "Enrollment growth",
-    imageSrc: "/images/projects/summer-programs.webp",
-  },
-  {
-    title: "Financial Aid",
-    href: "/projects#uchicago-financial-aid",
-    description:
-      "Owned information architecture and service integration for high-stakes aid journeys, improving clarity and accessibility for applicants.",
-    focus: "Financial aid UX",
-    imageSrc: "/images/projects/financial-aid.webp",
-  },
-  {
-    title: "Career Advancement",
-    href: "/projects#uchicago-career-advancement",
-    description:
-      "Delivered a modular system for events, advising, and multi-audience journeys with maintainable patterns for long-term content evolution.",
-    focus: "Adult learners",
-    imageSrc: "/images/projects/career-advancement.webp",
-  },
-];
+const highlightedProjects = caseStudies.map((study) => ({
+  title: study.title,
+  href: `/projects#${study.slug}`,
+  description: study.homepageDescription,
+  focus: study.homepageFocus,
+  imageSrc: study.imageSrc,
+}));
 
 const coreStack = [
   "JavaScript",
@@ -81,13 +55,14 @@ export default function HomePage() {
             Jeff Killinger
           </h1>
           <p className="text-xl font-medium text-stone-800 dark:text-stone-200">
-            Solutions Engineer / Web Developer
+            Solutions Architect & Developer
           </p>
           <p className="max-w-prose text-base leading-relaxed text-stone-700 md:max-w-[min(50vw,42rem)] md:text-lg dark:text-stone-300">
-            I design and build API-driven SaaS systems with a focus on headless CMS and composable
-            architecture. My work spans scalable frontend implementation, structured integrations across
-            GraphQL and REST APIs, and clear technical communication with cross-functional teams. I am
-            especially interested in onboarding, personalization, and billing flows that hold up in production.
+            I design and build API-driven SaaS systems using headless CMS, composable architecture, and
+            scalable frontend systems. My work spans structured integrations across GraphQL and REST APIs,
+            reusable content models, and clear technical communication with cross-functional teams. I&apos;m
+            especially interested in onboarding, personalization, and billing flows that hold up in
+            production.
           </p>
           <p className="max-w-prose text-sm leading-relaxed text-stone-600 md:max-w-[min(50vw,42rem)] md:text-base dark:text-stone-400">
             Currently building a multi-tenant SaaS platform that combines CMS-driven content, rule-based

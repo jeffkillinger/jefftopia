@@ -5,14 +5,14 @@ import { Tag } from "@/app/components/tag";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "Professional experience focused on frontend engineering, API integration, system design, CI/CD, and accessibility at the University of Chicago.",
+    "Professional experience spanning frontend engineering, API integration, system design, CMS architecture, and production delivery at the University of Chicago.",
 };
 
 const highlights = [
-  "Built and maintained React/Gatsby applications for high-traffic academic and admissions platforms.",
-  "Integrated GraphQL and REST services to power dynamic content, forms, and data-driven UX.",
+  "Built and maintained React and Gatsby applications for high-traffic academic and admissions platforms.",
+  "Integrated GraphQL and REST services to power structured content, forms, and data-driven user flows.",
   "Designed frontend architecture patterns and reusable component systems across multiple sites.",
-  "Collaborated with CMS teams to align content modeling with engineering constraints.",
+  "Partnered with CMS teams to align content modeling with editorial needs and engineering constraints.",
   "Implemented CI/CD quality gates for linting, type safety, and production build confidence.",
   "Led cross-functional implementation with designers, content strategists, and program stakeholders.",
   "Delivered performance and accessibility improvements aligned with Core Web Vitals and WCAG standards.",
@@ -25,7 +25,7 @@ export default function ExperiencePage() {
   return (
     <PageLayout
       title="Experience"
-      description="Production-focused engineering work with long-term ownership, architecture responsibility, and collaborative delivery."
+      description="Production-focused engineering work combining system scoping, frontend architecture, and hands-on implementation."
     >
       <article className="fade-in space-y-8 rounded-2xl border border-stone-200/80 bg-white p-6 shadow-sm md:p-8 dark:border-stone-800 dark:bg-stone-950">
         <header className="space-y-2">

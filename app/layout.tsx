@@ -6,9 +6,9 @@ if (process.env.NODE_ENV === "development" && process.env.MEM_WATCH === "1") {
   void import("../scripts/dev-mem-watch.mjs");
 }
 
-const siteTitle = "Jeff Killinger | Software Engineer";
+const siteTitle = "Jeff Killinger | Solutions Architect & Developer";
 const siteDescription =
-  "Senior software engineering portfolio focused on frontend architecture, API integration, cloud delivery, and production systems.";
+  "Portfolio of a solutions architect and developer focused on API-driven SaaS systems, composable architecture, and scalable frontend delivery.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jefftopia.dev"),
@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   applicationName: "Jeff Killinger",
   keywords: [
     "Jeff Killinger",
-    "Software Engineer",
+    "Solutions Architect",
+    "Solutions Engineer",
     "Frontend Engineer",
     "Next.js",
     "TypeScript",
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
         url: "/og/jefftopia-og.svg",
         width: 1200,
         height: 630,
-        alt: "Jeff Killinger software engineering portfolio",
+        alt: "Jeff Killinger solutions architect and developer portfolio",
       },
     ],
   },
