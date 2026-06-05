@@ -11,7 +11,7 @@ const siteDescription =
   "Portfolio of a solutions architect and developer focused on API-driven SaaS systems, composable architecture, and scalable frontend delivery.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jefftopia.dev"),
+  metadataBase: new URL("https://www.jeffkillinger.com"),
   title: {
     default: siteTitle,
     template: "%s | Jeff Killinger",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: siteTitle,
     description: siteDescription,
     type: "website",
-    url: "https://jefftopia.dev",
+    url: "https://www.jeffkillinger.com",
     siteName: "Jeff Killinger",
     images: [
       {

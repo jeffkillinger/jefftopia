@@ -8,7 +8,7 @@ import { Tag } from "@/app/components/tag";
 import { caseStudies } from "@/src/data/case-studies";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Jeff Killinger",
   description:
     "Jeff Killinger is a solutions architect and developer focused on API-driven SaaS systems, composable architecture, and scalable frontend delivery.",
 };
